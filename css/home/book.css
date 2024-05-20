@@ -1,0 +1,296 @@
+@import url(../starter.css);
+
+
+section#book{
+    position: relative;
+}
+
+/* Progress Bar */
+
+.progressbar{
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width:30%;
+    top:8rem;
+    left:50%;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+    counter-reset: step ;
+    min-width:38rem;
+}
+
+.progressbar::before , .progress{
+    content:"";
+    height:1px;
+    width:100%;
+    position: absolute;
+    top:50%;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+    background-color:#dcdcdc;
+    z-index:-1; 
+}
+
+.progress{
+    background-color:#000;
+    width:0%;
+    -webkit-transition:.5s;
+    -o-transition:.5s;
+    transition:.5s; 
+}
+
+
+.progress-step{
+    width:5rem;
+    height:5rem;  
+    background-color:#fff;
+    color:#000;
+    border:1px solid #aaa;
+    border-radius:50%;
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    -webkit-box-align:center;
+        -ms-flex-align:center;
+            align-items:center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+}
+
+.progress-step::before {
+    counter-increment:step; 
+    content: counter(step); 
+}
+
+.progress-step::after{
+    content:attr(data-title);
+    position:absolute;
+    top:calc(100% + .75rem);
+    color:#000;
+    text-transform:uppercase;
+    font-size:1.2rem;
+}
+.progress-step.progress-step-active{
+    background:#000;
+    color:#fff;
+    border:1px solid #000;
+}
+
+.progress-step.progress-step-active::after{
+    font-weight:bold;
+}
+
+/* Form */
+
+section#book .form{
+    min-height:35rem;
+    padding:8rem 6rem;
+    width:80%;
+    max-width:85rem;
+    border-radius:0.6rem;
+    margin: 16rem auto;
+    margin-bottom:0;
+    position: relative;
+}
+
+section#book .form.showShadow{
+    -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.form-step{
+    display:none;
+} 
+
+.form-step-active{
+    display:block;
+}
+
+.form-step-active.completed{
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    -webkit-box-orient:vertical;
+    -webkit-box-direction:normal;
+        -ms-flex-direction:column;
+            flex-direction:column;
+    -webkit-box-align:center;
+        -ms-flex-align:center;
+            align-items:center;
+    -webkit-box-pack:center;
+        -ms-flex-pack:center;
+            justify-content:center;
+}
+
+.form-step h3 , .form-step h1{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-weight: 500;
+    text-transform: capitalize;
+} 
+
+.form-step h3 i , .form-step h1 i{
+    font-size:5rem;
+    margin:1rem;
+}
+
+
+
+section#book .form .inputFields{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap:2%;
+}
+section#book .form .inputFields > *{
+    width:48%;
+    margin:1.6rem 0;
+    position: relative;
+}
+section#book .form .inputFields > *::before{
+    content:"*";
+    display:block;
+    position: absolute;
+    top:-1.5rem;
+    right:2px;
+    color:red;
+}
+
+section#book .form h3{
+    margin-bottom:1.5rem;
+    font-weight:500;
+    text-transform: capitalize;
+}
+
+section#book .form .inputFields input{
+    padding:0.9rem;
+    border-radius:0.8rem;
+    border:1px solid #aaa;
+    outline:0;
+    width:100%;
+}
+
+section#book .form .inputFields .input-name-group{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap:1%;
+}
+section#book .form .inputFields .input-name-group input{
+    width:49.5%;
+}
+
+.form-controls{
+    position:absolute;
+    bottom:-8rem;
+    right:3rem;
+}
+
+.form-controls a.btn{
+    display:inline-block;
+    text-align:center;
+    padding:1rem 3rem;
+    border-radius:0.5rem;
+    margin:0 1rem;
+    width:14rem;
+}
+
+.form-controls a.btn-prev{
+    background: #fff;
+    color:#000;
+    border:1px solid #aaa;
+}
+
+.form-controls a.btn-next{
+    background: #000;
+    color:#fff;
+    border:1px solid #000;
+}
+
+.form-step.completed p {
+    line-height:4rem;
+    color:rgb(125, 110, 110);
+}
+    
+.form-step.completed button{
+    outline:0;
+    border:0;
+    background:#000;
+    color:#fff;
+    padding:1rem 3rem;
+    border-radius:0.5rem;
+    margin-top:1rem;
+}
+
+.form-step.completed button:hover{
+    cursor:pointer;
+}
+
+
+@media all and (max-width:970px){
+    section#book .form{
+        width:96%;
+    }
+}
+
+@media all and (max-width:800px){
+    section#book .form h3{
+        font-size:1.6rem;
+    }
+}
+
+@media all and (max-width:600px){
+    section#book .form .inputFields{
+        display:block;
+    }
+
+    section#book .form .inputFields > *{
+        width:100%;
+    }
+
+    .progressbar{
+        min-width:31rem;
+    }
+
+    .progress-step::after{
+        font-size:1rem;
+    }
+
+    section#book .form{
+        padding: 6rem 4rem;
+    }
+}
+
+@media all and (max-width:430px){
+    .progressbar {
+        min-width: 29rem;
+        left: 52%;
+    }
+    
+    section#book .form{
+        padding: 6rem 2rem;
+    }
+}
+
+@media all and (max-width:380px){
+    .progressbar {
+        left: 54%;
+    }
+    section#book .form{
+        padding: 4rem 1rem;
+    }
+}

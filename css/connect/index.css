@@ -1,0 +1,258 @@
+@import url(../starter.css);
+
+
+#connect{
+    padding:5rem 8rem;
+}
+
+#connect .connect-section_title{
+    margin-top:2rem;
+    font-size:3.1rem;
+    font-weight:500;
+}
+
+#connect .connect-section_name{
+    margin-top:4rem;
+    font-size:2.4rem;
+    font-weight:400;
+}
+
+#connect .connect-details > *{
+    margin:2rem 0;
+    font-size:1.8rem;
+}
+
+/******  Training Videos ******/
+
+#connect .training-videos{
+    margin-top:4rem;
+}
+
+#connect .training-videos .training-videos-library{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-evenly;
+    margin-top:3rem;
+    gap:2rem;
+}
+
+#connect .training-videos .training-videos-library article{
+    width:23%;
+    margin-bottom:7rem;
+    position: relative;
+}
+
+#connect .training-videos .training-videos-library article > div{
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    border:2px solid #aaa;
+    border-radius:.9rem;
+}
+
+#connect .training-videos .training-videos-library article video{
+    width:100%;
+    height:100%;
+    object-fit: fill;
+}
+
+#connect .training-videos .training-videos-library article::after{
+    content:attr(data-caption);
+    display:block;
+    font-size:1.5rem;
+    position:absolute;
+    bottom:-4rem;
+    left:50%;
+    transform:translateX(-50%);
+    color:#353343;
+    text-align:center;
+    width:100%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+
+/**** Announcements ****/
+
+.announcements h1{
+    margin-top:1rem;
+    margin-bottom:3rem;
+    font-size:3.1rem;
+    font-weight:500;
+}
+
+.announcements  .announcement-card-container{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-evenly;
+    gap:3rem;
+}
+
+.announcements article.announcement-card{
+    width:48%;
+    height:22rem;
+    overflow:hidden;
+}
+
+.announcements article.announcement-card .announcement-card-image{
+    width:45%;
+    float:left;
+    padding-right:3rem;
+}
+.announcements article.announcement-card .announcement-card-image img{
+    height:22rem;
+    border:1.5px solid #aaa;
+    border-radius:.9rem;
+    width:100%;
+}
+
+.announcements article.announcement-card .announcement-card-description-details{
+    width:45%;
+    float:left;
+}
+
+.announcement-card-description-title{
+    text-transform: uppercase;
+    line-height:3.5rem;
+    font-size:2rem;
+}
+
+.announcement-card-description-details{
+    color:rgb(148, 137, 137);
+    margin-top:1rem;
+}
+
+
+/**** Media Queries *****/
+
+@media all and (max-width:1230px){
+    #connect .training-videos .training-videos-library article{
+        min-width:25rem;
+    }
+
+    .announcements article.announcement-card,.announcements article.announcement-card .announcement-card-image img{
+        height:20rem;
+    }
+    .announcement-card-description-title{
+        line-height:3rem;
+    }
+}
+
+@media all and (max-width:1110px){
+    .announcements article.announcement-card{
+        width:47%;
+    }
+
+    .announcements article.announcement-card,.announcements article.announcement-card .announcement-card-image img{
+        height:16rem;
+    }
+}
+
+
+@media all and (max-width:1050px){
+    html{
+        font-size:58%;
+    }
+
+    #connect {
+        padding: 5rem 3rem;
+    }
+
+    #connect .training-videos .training-videos-library article{
+        min-width:25rem;
+    }
+    .announcement-card-description-title{
+        line-height: 2.8rem;
+    }
+}
+
+
+@media all and (max-width:1050px){
+    .announcements article.announcement-card, .announcements article.announcement-card .announcement-card-image img {
+        height: 15rem;
+      }
+}
+
+@media all and (max-width:825px){
+    .announcements article.announcement-card .announcement-card-image{
+        padding-right: 2rem;
+    }
+}
+
+@media all and (max-width:790px){
+    .announcements article.announcement-card, .announcements article.announcement-card .announcement-card-image img{
+        height: 14rem;
+    }
+    .announcements article.announcement-card .announcement-card-image {
+        width: 48%;
+    }
+}
+
+@media all and (max-width:670px){
+    html{
+        font-size:60%;
+    }
+
+    .announcement-card-description-title{
+        font-size:1.8rem;
+    }
+
+    #connect {
+        padding: 5rem 3rem;
+      }
+
+    .announcements article.announcement-card, .announcements article.announcement-card .announcement-card-image img{
+        height: 12rem;
+    }
+} 
+
+@media all and (max-width:620px){
+    .announcements article.announcement-card, .announcements article.announcement-card .announcement-card-image img {
+        height: 11rem;
+      }
+
+      .announcements article.announcement-card .announcement-card-image {
+        width: 51%;
+      }
+} 
+
+
+@media all and (max-width:570px){
+    html{
+        font-size:58%;
+    }
+    #connect .training-videos .training-videos-library article{
+        width:20%;
+        min-width:20rem;
+    }
+    #connect .connect-section_title{
+        font-size:2.6rem;
+    }
+    .announcements article.announcement-card .announcement-card-image{
+        padding-right: 3rem;
+    }
+    .announcements article.announcement-card {
+        width: 100%;
+    }
+
+    .announcements article.announcement-card .announcement-card-image{
+        width:38%;
+    }
+    .announcements article.announcement-card, .announcements article.announcement-card .announcement-card-image img{
+        width:100%;
+    }
+} 
+
+@media all and (max-width:480px){
+
+    #connect .training-videos .training-videos-library article{
+        width:100%;
+        margin-bottom:5rem;
+    }
+
+    .announcements article.announcement-card .announcement-card-image {
+        padding-right: 2rem;
+      }
+}
+

@@ -1,0 +1,397 @@
+@import url(../starter.css);
+
+body{
+    min-height:100vh;
+}
+#customers{
+    display:flex;
+}
+
+#customers aside{
+    width:25%;
+    border-right:1px solid #ebebeb;
+}
+
+#customers section{
+    width:75%;
+    padding:6rem 5rem;
+}
+
+#customers section button.btn-back{
+    display:none;
+}
+
+/*** Aside ***/
+
+#customers aside h2{
+    font-size:2.6rem;
+    font-weight:400;
+    padding:3rem 2rem;
+}
+
+#customers aside .client-filters{
+    display:flex;
+    justify-content: space-between;
+    padding: 0 2rem;
+}
+
+#customers aside .client-filters li{
+    width:30%;
+}
+
+#customers aside .client-filters li button{
+    padding:1.5rem;
+    background-color:#efeff0;
+    outline:0;
+    border:0;
+    border-radius: .7rem;
+    width:100%;
+}
+
+#customers aside .client-filters li button:hover{
+    cursor: pointer;
+}
+
+#customers aside .client-filters li button.client-filters-active{
+    background-color:#000;
+    color:#fff;
+}
+
+#customers aside .fixed-filters{
+    height:18rem;
+    padding-bottom:3rem;
+}
+
+#customers aside ul.client-card li{
+    min-height:9rem;
+    padding: 0 2rem;
+    display:flex;
+    align-items:center;
+    position: relative;
+}
+
+#customers aside ul.client-card li:hover{
+    cursor: pointer;
+}
+
+#customers aside ul.client-card li.client-card-active{
+    background-color:#efefef;
+}
+
+#customers aside ul.client-card li .client-img{
+    border-radius:50%;
+    width:5rem;
+    height:5rem;
+    overflow:hidden;
+}
+
+#customers aside ul.client-card li .client-img img{
+    width: 100%;
+    height:auto;
+}
+
+#customers aside ul.client-card li .client-card-info{
+    margin-left:2rem;
+}
+
+#customers aside ul.client-card li .client-card-info .client-card-info-name{
+    width:15rem;
+    font-size:1.9rem;
+    white-space:nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#customers aside ul.client-card li .client-card-info .client-card-info-para{
+    font-size:1.2rem;
+}
+
+#customers aside ul.client-card li .client-card-pill{
+    width:8rem;
+    height:2.3rem;
+    color:#fff;
+    border-radius: 1.5rem;
+    position:absolute;
+    right:2rem;
+    text-align: center;
+}
+
+#customers aside ul.client-card li .client-card-pill-green{
+    background:#00a15c;
+}
+
+#customers aside ul.client-card li .client-card-pill.client-card-pill-red{
+    background:#ef4249;
+}
+
+#customers aside ul.client-card li .client-card-pill-yellow{
+    background:#fca428;
+}
+
+
+/*** Section ***/
+
+section > div{
+    width:60%;
+}
+section .customer-section1 .customer-section1-name{
+    font-size:2rem;
+}
+
+section .customer-section1 {
+    display:flex;
+    flex-direction: column;
+    gap:2rem;
+}
+section .customer-section1 div:not(:first-child){
+    display:flex;
+    align-items:center;
+}
+
+section .customer-section1 i{
+    font-size: 2.5rem;
+    margin-right:1rem;
+}
+
+section .customer-section{
+    padding:3rem;
+}
+
+section .customer-section:not(:last-child){
+    border-bottom:1px solid #aaa;
+}
+
+section .customer-section h1{
+    font-size:2.4rem;
+    font-weight:500;
+    padding-bottom:2rem;
+}
+
+section .customer-section2 .timeline{
+    display:flex;
+    flex-direction: column;
+    gap:5rem;
+    position:relative;
+    width:max-content;
+}
+section .customer-section2 .timeline::after{
+    content:"";
+    display:block;
+    position:absolute;
+    left:50%;
+    height:100%;
+    width:1.5px;
+    background:#000;
+    z-index:-1;
+}
+
+section .customer-section2 .timeline li{
+    width:2.5rem;
+    height:2.5rem;
+    border:1.5px solid #000;
+    border-radius:50%;
+    position: relative;
+    background:#fff;
+}
+
+section .customer-section2 .timeline li::after{
+    content:attr(data-value);
+    display:block;
+    position:absolute;
+    left:4rem;
+    top:50%;
+    transform:translateY(-50%);
+    font-size:1.7rem;
+}
+
+section .customer-section2 .timeline li.timeline-completed::before{
+    content:'✓';
+    position:absolute;
+    top: 50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+}
+
+section .customer-section3 table{
+    width:100%;
+}
+section .customer-section3 table tr td{
+    border-bottom:1px solid #ebebeb;
+    padding:1.2rem;
+    font-size:1.7rem;
+}
+
+@media all and (max-width:1440px){
+    #customers aside{
+        width:30%;
+    }
+}
+
+@media all and (max-width:1250px){
+    #customers aside{
+        width:35%;
+    }
+}
+
+@media all and (max-width:1110px){
+    #customers aside{
+        width:40%;
+    }
+}
+
+@media all and (max-width:1000px){
+    html{
+        font-size:60%;
+    }
+}
+
+@media all and (max-width:970px){
+    #customers aside{
+        width:45%;
+    }
+
+    html{
+        font-size:58%;
+    }
+    section > div{
+        width:80%;
+    }
+}
+
+@media all and (max-width:880px){
+    #customers aside{
+        width:50%;
+    }
+    section > div{
+        width:100%;
+    }
+}
+
+@media all and (max-width:855px){
+    #customers aside{
+        width:55%;
+    }
+    #customers section {
+        padding: 4rem 2rem;
+    }
+}
+
+@media all and (max-width:790px){
+    #customers aside{
+        width:60%;
+    }
+}
+
+/************** Mobile View ***************/
+
+@media all and (max-width:750px){
+    #customers{
+        display:block;
+    }
+
+    #customers aside{
+        width:100%;
+    }
+
+    #customers section{
+        display:none;
+    }
+    #customers section button.btn-back{
+        display:block;
+        padding:0.8rem 1rem;
+        outline:0;
+        border:0;
+        text-align:center;
+    }
+
+    #customers section button.btn-back i{
+        font-weight: bold;
+    }
+
+
+    #customers section button.btn-back:hover{
+        cursor: pointer;
+    }
+
+    #customers aside ul.client-card li .client-card-info .client-card-info-name{
+        width:auto;
+    }
+
+    #customers aside ul.client-card li .client-card-info .client-card-info-para{
+        font-size:1.5rem;
+    }
+
+    #customers aside ul.client-card li .client-img{
+        width: 6rem;
+        height: 6rem;
+    }
+
+    #customers aside ul.client-card li .client-card-info{
+        margin-left:4rem;
+    }
+
+    #customers aside ul.client-card li .client-card-pill{
+        width:10rem;
+        height:3.3rem;
+        right:5rem;
+    }
+
+    #customers.show-mobile-details aside{
+        display:none;
+    }
+
+    #customers.show-mobile-details section{
+        display:block;
+    }
+
+
+
+}
+
+@media all and (max-width:576px){
+    #customers aside ul.client-card li .client-card-info .client-card-info-name{
+        width:22rem;
+    }
+    #customers section{
+        width:100%;
+    }
+}
+
+@media all and (max-width:490px){
+    #customers aside ul.client-card li .client-card-info .client-card-info-name{
+        width:20rem;
+    }
+    #customers aside ul.client-card li .client-img{
+        width:5rem;
+        height:5rem;
+    }
+    #customers aside ul.client-card li .client-card-info{
+        margin-left:2rem;
+    }
+    #customers aside ul.client-card li .client-card-pill{
+        height:3rem;
+        right:3rem;
+    }
+}
+
+@media all and (max-width:400px){
+    #customers aside ul.client-card li .client-card-info .client-card-info-name{
+        width:18rem;
+    }
+
+    #customers aside ul.client-card li .client-card-pill{
+        right:2rem;
+    }
+    #customers aside ul.client-card li{
+        padding:0 1.5rem;
+    }
+}
+
+@media all and (max-width:378px){
+    html{
+        font-size:56%;
+    }
+    #customers aside ul.client-card li .client-card-info .client-card-info-name{
+        width:16rem;
+    }
+}

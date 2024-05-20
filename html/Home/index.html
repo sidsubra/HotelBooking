@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <link rel="stylesheet" href="../../css/home/index.css">
+</head>
+<body>
+    <!-- Nav Bar -->
+    <nav>
+        <ul class="navbar">
+            <li class="home selected"><a href="index.html">Home</a></li>
+            <li class="customers"><a href="../Customers/index.html">Customers</a></li>
+            <li class="connect"><a href="../Connect/index.html">Connect with us</a></li>
+            <li class="profile"><a href="../Profile/index.html">My Profile</a></li>
+        </ul>
+        <div class="hamburger btn"><i class="las la-bars"></i></div>
+        <div class="closeNav btn">+</div>
+    </nav>
+    
+    <!-- Section -->
+    <section class="homeSection">
+        <div class="filters">
+            <div class="searchBox">
+                 <input type="text" name="q">
+                 <button type="search" class="search btn"><i class="las la-search"></i></button>
+            </div>
+            <div class="divider">|</div>
+            <div class="customFilters">
+                <select id="buy" class="active">
+                    <option value="All">All</option>
+                    <option value="buy">Buy</option>
+                    <option value="sell">Sell</option>    
+                </select>
+                <select id="type">
+                    <option selected value="All">All</option>
+                    <option value="apartment">Apartment</option>
+                    <option value="sell">Villa</option>    
+                </select>
+                <select id="bedroom" class="active">
+                    <option selected value="All">All</option>
+                    <option value="1">1</option>
+                    <option value="1">2</option>
+                    <option value="1">3</option>
+                    <option value="1">4</option>
+                    <option value="1">5</option>
+                    <option value="1">6</option>
+                    <option value="1">7</option>
+                </select>
+                <select id="currency">
+                    <option selected value="All">Budget</option>
+                    <option selected>$1000-$10000</option>
+                    <option value="apartment">$10000-$100000</option>
+                </select>
+            </div>
+            <a href="#" class="viewOnMap"><i class="las la-map"></i>&nbsp;View on map</a>
+        </div>
+
+        <div class="cardOuterContainer">
+
+            <!-- Card Start -->
+           <a class="card project" href="carddetails.html">
+                <div class="imgContainer">
+                    <div class="project-verified-label verified">Project</div>
+                    <img src="https://t-cf.bstatic.com/xdata/images/hotel/square600/206683386.webp?k=b407a4caa0b891e9904e6d1d30e9872444927363890bf3e3fbf5d9b0ee5d9b2e&o=&s=1"/>
+                    <div class="type">Apartment</div>
+                </div>
+                <div class="propertyDetails">
+                    <h4>Villa 300 SQM facing on 15m width street</h4>
+                    <p class="address">Hitteen, North, Riyadh</p>
+                    <div class="amenities">
+                        <div>
+                            <i class="las la-bed"></i>
+                            <label>2, 3</label>
+                        </div>
+                        <div>
+                            <i class="las la-bath"></i>
+                            <label>3</label>
+                        </div>
+                        <div>
+                            <i class="las la-ruler-combined"></i>
+                            <label>300 SQM</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="cardFooter">
+                    <span>SAR</span><h3>1.20M - 1.90M</h3>
+                </div>
+            </a>
+            <!-- Card End -->
+                        <!-- Card Start -->
+           <a class="card project" href="carddetails.html">
+            <div class="imgContainer">
+                <div class="project-verified-label verified">Project</div>
+                <img src="https://t-cf.bstatic.com/xdata/images/hotel/square600/206683386.webp?k=b407a4caa0b891e9904e6d1d30e9872444927363890bf3e3fbf5d9b0ee5d9b2e&o=&s=1"/>
+                <div class="type">Apartment</div>
+            </div>
+            <div class="propertyDetails">
+                <h4>Villa 300 SQM facing on 15m width street</h4>
+                <p class="address">Hitteen, North, Riyadh</p>
+                <div class="amenities">
+                    <div>
+                        <i class="las la-bed"></i>
+                        <label>2, 3</label>
+                    </div>
+                    <div>
+                        <i class="las la-bath"></i>
+                        <label>3</label>
+                    </div>
+                    <div>
+                        <i class="las la-ruler-combined"></i>
+                        <label>300 SQM</label>
+                    </div>
+                </div>
+            </div>
+            <div class="cardFooter">
+                <span>SAR</span><h3>1.20M - 1.90M</h3>
+            </div>
+        </a>
+        <!-- Card End -->
+        <div>
+
+
+    </section>
+    <script type="text/javascript" src="../../js/starter.js"></script>
+</body>
+</html>

@@ -1,0 +1,587 @@
+@import url(../starter.css);
+
+.carddetails{
+    padding:5rem 10rem;
+}
+.carddetails section{
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+}
+
+.carddetails main{
+    width:70%;
+}
+.carddetails aside{
+    width:28%;
+}
+
+.carddetails .breadcrumbs{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    color:rgb(170, 158, 158);
+    margin-bottom:1rem;
+}
+
+.carddetails .breadcrumbs li:not(:last-child)::after{
+    content:">";
+    margin:0.8rem;
+}
+
+/* @media all and (max-width:992px){
+    .carddetails .breadcrumbs{
+        justify-content: center;
+    }
+}  */
+
+
+/* Slidshow */
+
+.slideContainer .slider-for img{
+    height:45rem;
+}
+.slideContainer .slider-nav  img{
+    height:12rem;
+}
+
+.slideContainer .slider-for .slick-slide{
+    border-radius:2rem;
+    overflow: hidden;
+}
+
+.slideContainer .slider-nav{
+    width:75%;
+    margin:0 auto;
+    margin-top: -6rem;
+    margin-bottom: 5rem;
+    background: #222222;
+    padding:1rem 4rem;
+    border-radius: 5rem;
+}
+
+.slick-next{
+    right:19px;
+}
+
+.slick-prev{
+    left:0;
+}
+
+.slick-prev::before, .slick-next::before{
+    font-size:4rem;
+}
+
+
+.slideContainer .slider-nav .slick-slide { 
+    cursor: pointer; 
+}
+
+.slideContainer .slick-prev::before, .slick-next::before {
+    color: #fff;
+  }
+
+  
+.slick-prev::before, .slick-next::before {
+    opacity:1;
+}
+
+.slideContainer .slider-nav img{
+    border-radius: 1rem;
+    height:9rem;
+}
+
+.slideContainer .slider-nav .slick-slide{
+    padding:0 0.8rem;
+}
+
+.slider-nav .slick-track .slick-slide img{
+    border:1px solid #000;
+}
+
+.slider-nav .slick-track .slick-slide.slick-current.slick-active img{
+    border:3px solid #fff;
+}
+/*** Pills ****/
+
+.carddetails .carddetails__pills{
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    gap:1rem;
+    margin:2rem 0;
+    font-size:1.3rem;
+}
+
+.carddetails .carddetails__pills li{
+    border-radius:0.6rem;
+    padding:0.5rem;
+    border:0.5px solid darkgreen;
+}
+
+.carddetails .carddetails__pills li.verified{
+    background:darkgreen;
+    color:#fff;
+}
+
+.carddetails main h1{
+    font-size:2.7rem;
+    margin-bottom:0.5rem;
+    text-transform: capitalize;
+}
+
+.carddetails main h5{
+    font-size:2rem;
+    font-weight:400;
+}
+
+.carddetails main h5 a{
+    text-decoration:underline;
+    text-transform: capitalize;
+}
+
+.carddetails ul.amenities{
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack:justify;
+        -ms-flex-pack:justify;
+            justify-content:space-between;
+    margin-top:3rem;
+}
+
+.carddetails ul.amenities li{
+    width:20%;
+    margin-bottom:3rem;
+    min-width:13rem;
+}
+
+.carddetails ul.amenities li i{
+    font-size:2.4rem;
+    color:rgb(148, 136, 136);
+}
+
+.carddetails ul.amenities li h6{
+    display:inline;
+    margin:0 1rem;
+    font-size:2rem;
+}
+
+.carddetails ul.amenities li p{
+    color:rgb(148, 136, 136);
+    font-weight:400;
+    text-transform: capitalize;
+}
+
+.carddetails ul.amenities li span{
+    color:rgb(148, 136, 136);
+    font-size:1.1rem;
+}
+
+/*** Street Information ***/
+
+.streetInfo i{
+    font-size:2.4rem;
+    color:rgb(148, 136, 136);
+}
+
+.streetInfo span{
+    color:rgb(148, 136, 136);
+}
+
+/*** Additional Infomation ***/
+
+.additionalInfo{
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    gap:10%;
+}
+
+.additionalInfo table{
+    width:40%;
+    text-align: left;
+}
+
+.additionalInfo table tr td, .additionalInfo table tr th{
+    padding:1rem;
+    font-size:1.6rem;
+}
+
+/*** Features & amenities ***/
+
+.featuresAmenities{
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    gap:10%;
+}
+
+.featuresAmenities table{
+    width:40%;
+    text-align: left;
+    font-weight:500;
+}
+
+.featuresAmenities table tr td, .featuresAmenities table tr th{
+    padding:1rem;
+    font-size:1.6rem;
+}
+
+.featuresAmenities table tr i{
+    font-size:2rem;
+    color:rgb(148, 136, 136);
+}
+
+table.paymentPlans{
+    width:100%;
+}
+
+table.paymentPlans td, table.paymentPlans th{
+    padding:1rem;
+    font-size:1.6rem;
+}
+
+/**** Fixtures & Fittings ****/
+
+.fixturesFittings{
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    gap:10%;
+}
+
+.fixturesFittings table{
+    width:40%;
+    text-align: left;
+    font-weight:500;
+}
+
+.fixturesFittings table tr td, .fixturesFittings table tr th{
+    padding:1rem;
+    font-size:1.6rem;
+}
+
+.fixturesFittings table tr i{
+    font-size:2rem;
+    color:rgb(148, 136, 136);
+}
+
+/*** District ***/
+
+.district{
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    -webkit-box-orient:vertical;
+    -webkit-box-direction:normal;
+        -ms-flex-direction:column;
+            flex-direction:column;
+    -webkit-box-align:center;
+        -ms-flex-align:center;
+            align-items:center;
+}
+
+.carddetails main .district h7{
+    font-size:1.9rem;
+    color:rgb(148, 136, 136);
+    letter-spacing: 2px;
+    font-weight:bold;
+    text-transform:uppercase;
+}
+
+.carddetails main .district h1{
+    font-size:4rem;
+    font-weight:bold;
+}
+
+.carddetails main .propertyDescription{
+    line-height:3rem;
+    font-size:1.7rem;
+}
+
+.carddetails main .propertyDescription h1{
+    margin-bottom:1.7rem;
+}
+
+.carddetails main .map{
+    margin-top:2rem;
+    border:0;
+}
+ 
+.carddetails main .map iframe{
+    border:0;
+    border-top:1px solid rgb(230, 213, 213);
+    border-bottom:1px solid rgb(230, 213, 213);
+}
+
+/******** Aside **********/
+
+aside div, .asideMediaContainer div{
+     min-height:17rem;
+}
+
+aside > div:not(:first-child){
+    margin-top:4rem;
+}
+
+aside > div:first-child{
+    -webkit-box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    -webkit-box-orient:vertical;
+    -webkit-box-direction:normal;
+        -ms-flex-direction:column;
+            flex-direction:column;
+    padding:2rem 2rem;
+    border-radius:1.4rem;
+}
+
+aside div:first-child h1 , .asideMediaContainer div:first-child h1 {
+    font-size:3rem;
+}
+
+aside > div:first-child span , .asideMediaContainer > div:first-child span{
+    color:rgb(148, 136, 136);
+    font-size:1.1rem;
+}
+
+aside > div:first-child p , .asideMediaContainer > div:first-child p{
+    color:rgb(148, 136, 136);
+    font-size:1.5rem;
+    line-height: 3rem;
+}
+
+aside a , .asideMediaContainer a{
+    display:inline-block;
+    width:100%;
+    background: #000;
+    color:#fff;
+    text-align: center;
+    padding:1.5rem;
+    border-radius:1.4rem;
+    margin:1.5rem 0;
+}
+
+aside > div:first-child a {
+    margin:2rem 0;
+}
+aside .snapContainer , .asideMediaContainer .snapContainer{
+    width:100%;
+    height:70%;
+    background: url(../../components/samplesnap.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border:0.5px solid #000;
+}
+
+.asideMediaContainer{
+    display: none;
+}
+
+.asideMediaContainer .rateContainer{
+    width:100%;
+    height:70%;
+    border:0.5px solid #000;
+}
+
+.asideMediaContainer div{
+    width:45%;
+} 
+
+.asideMediaContainer .rateContainer{
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+}
+/**** Media Queries ****/
+
+@media all and (max-width:1300px){
+    .slideContainer .slider-nav{
+        width:90%;
+    }
+
+}
+
+@media all and (max-width:1200px){
+
+    html{
+        font-size:60%;
+    }
+
+}
+
+@media all and (max-width:992px){
+    .carddetails {
+        padding: 5rem;
+    }
+}
+
+@media all and (max-width:900px){
+    .carddetails section{
+        display: block;
+    }
+
+    .carddetails main{
+        width:100%;
+    }
+    .slideContainer{
+        max-width:80rem;
+        margin:0 auto;
+    }
+    aside{
+        display: none;
+    }
+    .asideMediaContainer{
+        display:-webkit-box;
+        display:-ms-flexbox;
+        display:flex;
+        -ms-flex-wrap:wrap;
+            flex-wrap:wrap;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        gap:3rem;
+    }
+    aside a, .asideMediaContainer a{
+        margin:0.8rem 0;
+    }
+}
+
+@media all and (max-width:800px){
+    .carddetails {
+        padding: 3rem;
+    }
+}
+
+@media all and (max-width:768px){
+
+    html{
+        font-size:58%;
+    }
+
+    .slideContainer{
+        max-width:70rem;
+    }
+    .slideContainer .slider-for img{
+        height:40rem;
+    }
+
+    .slideContainer .slider-nav  img{
+        height:10rem;
+    }
+    .carddetails ul.amenities li{
+        text-align: center;
+      }
+}
+
+@media all and (max-width:650px){
+    .fixturesFittings{
+        gap:0%;
+        justify-content:space-between;
+    }
+    .fixturesFittings table{
+        width:50%;
+    }
+}
+
+@media all and (max-width:567px){
+
+    html{
+        font-size:56%;
+    }
+
+    .slideContainer .slider-nav{
+        width:95%;
+    }
+
+    .slideContainer .slider-nav .slick-slide{
+        padding:0 0.4rem;
+    }
+    
+    .featuresAmenities{
+        gap:0;
+        justify-content:space-between;
+    }
+
+    aside a, .asideMediaContainer a{
+        padding:1.5rem 1rem;
+    }
+
+    .additionalInfo{
+        gap:0;
+        justify-content:space-between;
+    }
+
+    .slideContainer{
+        max-width:70rem;
+    }
+    .slideContainer .slider-for img{
+        height:30rem;
+    }
+
+    .slideContainer .slider-nav  img{
+        height:7rem;
+    }
+    .featuresAmenities table tr td, .featuresAmenities table tr th{
+        white-space: nowrap;
+    }
+    .fixturesFittings table tr td, .fixturesFittings table tr th {
+        padding: 1rem;
+        font-size: 1.6rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 30px;
+      }
+      aside div, .asideMediaContainer div{
+        min-height:13rem;
+    }
+}
+
+@media all and (max-width:470px){
+    .asideMediaContainer{
+        gap:2rem;
+    }
+
+    .asideMediaContainer div{
+        width:47%;
+    }
+    aside a, .asideMediaContainer a {
+        padding: 1.5rem 1rem;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .carddetails ul.amenities li{
+        min-width:12rem;
+      }
+}
+
+@media all and (max-width:425px){
+    aside div:first-child h1, .asideMediaContainer div:first-child h1{
+        font-size:2.6rem;
+    }
+    .carddetails main h1{
+        font-size:2.4rem;
+    }
+    .carddetails main h5{
+        font-size: 1.6rem;
+    }
+}
